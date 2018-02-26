@@ -1,0 +1,17 @@
+Answers
+—————-
+ID: OK, AI
+user_id: INT
+question_id: INT (foreign key)
+text: text
+created_at: datetime
+updated_at:datetime
+
+Questions
+—————-
+ID: integer, PK, AI
+user_id: INT
+title:varchar(255)
+text: text
+created_at: datetime
+updated_at:datetime
