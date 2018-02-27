@@ -16,8 +16,10 @@ class QuestionController extends Controller
 
      }
 
-    public function show(){
+    public function show($id){
+        $question = DB::table('questions')->find($id);
         $view = view('questions.show');
+        $view->question = $question;
         return $view;
     }
 }
