@@ -26,7 +26,7 @@
             </div>
             <div class="question-right">
                 <div class="question-name">
-                    <a href="{{ route('show question', ['id' =>'Something']) }}">{{ $question->title }}</a>
+                    <a href="{{ route('show question', ['id' => $question->id]) }}">{{ $question->title }}</a>
                 </div>
                 <div class="question-info">
                     asked at {{ $question->created_at }} by <a href="">slavo</a>
@@ -35,6 +35,10 @@
         </div>
 
         @endforeach
+
+        <br/>
+
+        <a href="/questions/create" class="btn btn-primary">Place a question</a>
     </div>
 </section>
 
