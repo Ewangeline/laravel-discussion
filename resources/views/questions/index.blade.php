@@ -11,6 +11,8 @@
 <section id="questions">
     <div class="container">
 
+        @foreach ($questions as $question)
+
         <div class="question">
             <div class="question-left">
                 <div class="question-stat">
@@ -24,27 +26,17 @@
             </div>
             <div class="question-right">
                 <div class="question-name">
-                    <a href="{{ route('show question', ['id' =>'Something']) }}">SceneKit Swift - just play dae scene? Just getting white screen?</a>
+                    <a href="{{ route('show question', ['id' =>'Something']) }}">{{ $question->title }}</a>
                 </div>
                 <div class="question-info">
-                    asked at 2017-03-03 14:23:22 by <a href="">slavo</a>
+                    asked at {{ $question->created_at }} by <a href="">slavo</a>
                 </div>
             </div>
         </div>
+
+        @endforeach
     </div>
 </section>
 
-<!-- @foreach($products as $product)
-<div class="question-right">
-                <div class="question-name">
-                    <a href="{{ route('show question', ['id' =>'Something']) }}">SceneKit Swift - just play dae scene? Just getting white screen?</a>
-                </div>
-                <div class="question-info">
-                    asked at 2017-03-03 14:23:22 by <a href="">slavo</a>
-                </div>
-            </div>
-
-
-@endforeach -->
 @endsection
 
