@@ -11,6 +11,14 @@
 
 <section id="questions">
     <div class="container">
+    @if(count($errors))
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+
+            @endforeach
+        </div>
+    @endif
 
                     {!! Form::open(['action' => 'QuestionController@store']) !!}
 
