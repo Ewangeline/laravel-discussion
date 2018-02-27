@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Route::get('/questions', 'QuestionController@index');
 Route::get('/questions/{any}', 'QuestionController@show')->name('show question');
+Route::get('/categories', 'CategoryController@index');
 
 // /questions/456
 // ['id'=>123]
