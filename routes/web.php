@@ -18,8 +18,12 @@ Route::get('/', function () {
 
 Route::get('/questions', 'QuestionController@index');
 Route::get('/questions/create', 'QuestionController@create');
-Route::get('/questions/{any}', 'QuestionController@show')->name('show question');
 Route::post('/questions', 'QuestionController@store');
+Route::get('/questions/{any}', 'QuestionController@show')->name('show question');
 
 // /questions/456
 // ['id'=>123]
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
